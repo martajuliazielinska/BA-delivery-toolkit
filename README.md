@@ -112,10 +112,9 @@ The BA approves every phase transition:
 ## Origin
 
 Architecture adapted from IDEASHACK 2026 — Entropy Solvers team.
-Original repo: [entropy-solvers-ideashack](https://github.com/martajuliazielinska/entropy-solvers-ideashack)
 
 The hackathon architecture proved that one PM/BA with an AI agent system can run a full product discovery cycle. This toolkit applies the same pattern to enterprise delivery.
 
 ---
 
-*MIT License | Marta Zielinska 2026*
+*MIT License | Marta Julia Zielinska 2026*
