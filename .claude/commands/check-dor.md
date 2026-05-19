@@ -1,26 +1,64 @@
-# Command: /check-dor
+# Agent 3 — Definition of Ready Agent
+**Command:** `/check-dor`
+**Trigger:** After /create-story. Before refinement session.
 
-## Usage
-```
-/check-dor [story-file-path]
-```
+## Why
+A failed DoR means the refinement session wastes the team's time.
+This agent checks readiness BEFORE booking refinement — not before dev handover.
 
-## Example
-```
-/check-dor projects/crm-update/stories/search-by-symptom_researcher_2026-05-13.md
-```
+## DoR Checklist
 
----
+### FUNCTIONAL — mandatory
+- [ ] User story in standard format (As a / I want / So that)
+- [ ] Named persona — not "the user"
+- [ ] Business value clearly stated
+- [ ] Minimum 2 Gherkin AC (happy path + edge case)
+- [ ] Out of scope explicitly listed
+- [ ] Linked to parent Epic or requirement
 
-## Agent Instructions
+### DEPENDENCIES — checked by BA
+Downstream Systems:
+- [ ] All systems this story touches identified
+- [ ] Impact on downstream systems assessed
+- [ ] Dependencies on other stories or Epics named
 
-1. Read `CLAUDE.md`
-2. Read `.claude/skills/dor-checklist.md`
-3. Read `.claude/skills/invest-criteria.md`
-4. Read the specified story file
-5. Check every mandatory criterion — FAIL if any are missing
-6. Check every recommended criterion — FLAG if missing
-7. Output the DoR check report in the format specified in `dor-checklist.md`
-8. State clearly: PASS or FAIL
-9. If FAIL — list specific gaps with instructions for BA to fix
-10. Do not suggest fixes yourself — flag gaps, let BA decide how to resolve
+Analytics:
+- [ ] Tracking requirements defined OR confirmed not required
+
+Accessibility:
+- [ ] WCAG level confirmed OR confirmed not applicable
+
+UX Design:
+- [ ] Designs attached (Figma link) OR in progress with expected date OR confirmed not required
+
+Tech Design:
+- [ ] Flagged for architect: YES / NO / TBD
+
+### SIZE
+- [ ] T-shirt size: XS / S / M / L / XL
+- [ ] If L or XL — flagged for potential slice after estimation
+
+## Output
+
+PASS:
+DoR CHECK: PASS — ready for refinement session.
+[Summary of each area]
+
+FAIL:
+DoR CHECK: FAIL — do not book refinement yet.
+Failed: [list]
+Actions: [who does what]
+Run /check-dor again when resolved.
+
+## After PASS
+Refinement session → Effort estimation → Tech Design (if needed)
+→ QA test case review → /slice if >8 SP → Dev handover
+
+## Rules
+1. FAIL if any mandatory functional criterion missing
+2. Dependencies must be explicitly confirmed — not assumed
+3. "Not required" is valid — but must be stated
+4. Size must be assessed — even if rough
+
+BA Delivery Toolkit | Agent 3 | v2.0 | May 2026
+Author: Marta Julia Zielinska | MIT License
