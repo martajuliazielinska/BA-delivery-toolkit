@@ -1,64 +1,37 @@
-# Agent 3 — Definition of Ready Agent
-**Command:** `/check-dor`
+# Agent 4 — Definition of Ready
+**Command:** /check-dor
 **Trigger:** After /create-story. Before refinement session.
 
-## Why
-A failed DoR means the refinement session wastes the team's time.
-This agent checks readiness BEFORE booking refinement — not before dev handover.
+## Checklist
 
-## DoR Checklist
+FUNCTIONAL:
+- [ ] Story format: As a / I want / So that
+- [ ] Named persona
+- [ ] Business value stated
+- [ ] 2+ Gherkin AC (happy path + edge case)
+- [ ] Out of scope listed
+- [ ] Linked to Epic
 
-### FUNCTIONAL — mandatory
-- [ ] User story in standard format (As a / I want / So that)
-- [ ] Named persona — not "the user"
-- [ ] Business value clearly stated
-- [ ] Minimum 2 Gherkin AC (happy path + edge case)
-- [ ] Out of scope explicitly listed
-- [ ] Linked to parent Epic or requirement
+DEPENDENCIES:
+- [ ] Downstream systems identified and impact assessed
+- [ ] Analytics: defined OR confirmed not required
+- [ ] Accessibility: WCAG level confirmed OR not applicable
+- [ ] UX Design: attached / in progress with date / not required
+- [ ] Tech Design: YES / NO / TBD — flagged for architect
 
-### DEPENDENCIES — checked by BA
-Downstream Systems:
-- [ ] All systems this story touches identified
-- [ ] Impact on downstream systems assessed
-- [ ] Dependencies on other stories or Epics named
-
-Analytics:
-- [ ] Tracking requirements defined OR confirmed not required
-
-Accessibility:
-- [ ] WCAG level confirmed OR confirmed not applicable
-
-UX Design:
-- [ ] Designs attached (Figma link) OR in progress with expected date OR confirmed not required
-
-Tech Design:
-- [ ] Flagged for architect: YES / NO / TBD
-
-### SIZE
-- [ ] T-shirt size: XS / S / M / L / XL
-- [ ] If L or XL — flagged for potential slice after estimation
+SIZE:
+- [ ] T-shirt size assessed
+- [ ] L or XL flagged for potential slice after estimation
 
 ## Output
-
-PASS:
-DoR CHECK: PASS — ready for refinement session.
-[Summary of each area]
-
-FAIL:
-DoR CHECK: FAIL — do not book refinement yet.
-Failed: [list]
-Actions: [who does what]
-Run /check-dor again when resolved.
-
-## After PASS
-Refinement session → Effort estimation → Tech Design (if needed)
-→ QA test case review → /slice if >8 SP → Dev handover
+PASS → book refinement session
+FAIL → action list with owners → run /check-dor again
 
 ## Rules
-1. FAIL if any mandatory functional criterion missing
-2. Dependencies must be explicitly confirmed — not assumed
-3. "Not required" is valid — but must be stated
-4. Size must be assessed — even if rough
+1. FAIL if any functional criterion missing
+2. Dependencies explicitly confirmed — not assumed
+3. Not required is valid — must be stated
+4. Size must be assessed
 
-BA Delivery Toolkit | Agent 3 | v2.0 | May 2026
+BA Delivery Toolkit | Agent 4 | v2.0 | May 2026
 Author: Marta Julia Zielinska | MIT License
