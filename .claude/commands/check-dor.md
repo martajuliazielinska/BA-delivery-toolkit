@@ -33,6 +33,26 @@ FAIL → action list with owners → run /check-dor again
 3. Not required is valid — must be stated
 4. Size must be assessed
 
+## Enhancement/FTA — Additional DoR Criteria
+
+- [ ] Quality and Size completed and approved by Senior BA
+- [ ] All downstream dependencies confirmed (not assumed)
+- [ ] Analytics tracking defined OR confirmed not required
+- [ ] Accessibility WCAG level confirmed OR not applicable
+- [ ] 3rd party dependency timeline confirmed OR not applicable
+- [ ] Content requirements defined OR confirmed not required
+- [ ] Design: Figma attached / in progress with date / not required
+
+## AI Component DoR (use when story builds or changes an AI agent)
+
+- [ ] Agent boundaries defined (does / does not do / escalates when)
+- [ ] Input validation approach described
+- [ ] Human-in-the-loop trigger defined
+- [ ] Success metric defined — measurable, not "AI works correctly"
+- [ ] Fallback behaviour defined — what happens if AI fails or refuses
+
+---
+
 ## Agent Boundaries
 
 This agent can:

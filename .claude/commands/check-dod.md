@@ -42,5 +42,30 @@ FAIL → do not show PO. Actions: [who/what/by when]
 3. Evidence must be stated
 4. BA makes final call
 
+## AI Component DoD (use when story builds or changes an AI agent)
+
+- [ ] Agent output reviewed by BA before handover
+- [ ] Edge cases tested — not just happy path
+- [ ] Fallback behaviour confirmed in QA
+- [ ] Decision log updated — AI-assisted decisions flagged as [AI_DRAFT]
+
+---
+
+## Agent Boundaries
+
+This agent can:
+- Evaluate a story against every DoD criterion
+- Produce a PASS or FAIL result with a specific evidence-based gap list
+- Flag which criteria are missing and what is needed before the PO demo
+
+This agent cannot:
+- Approve the story for demo — BA makes that call
+- Waive any criterion
+- Access QA systems, build artefacts, or test environments directly
+
+Hands off to: BA to resolve gaps. On PASS, BA proceeds to PO demo.
+
+---
+
 BA Delivery Toolkit | Agent 6 | v1.0 | May 2026
 Author: Marta Julia Zielinska | MIT License
