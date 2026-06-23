@@ -18,7 +18,7 @@ If build-description is omitted, agent asks BA to paste QA notes or build summar
 
 1. Read `CLAUDE.md`
 2. Read `projects/{active-project}/PROJECT.md`
-3. Open the story file provided — read every Gherkin AC scenario
+3. Open the story file provided — read every Gherkin AC scenario. This file is the authoritative source. If AC is also pasted inline, compare it against the file. If they differ → stop and alert: "AC differs from the source file. Verify before continuing." Do not proceed until BA confirms which version is correct.
 4. If build-description is a file path — read it; if omitted — ask BA: "Paste the QA notes or build summary for this story."
 5. For each AC scenario, determine status:
    - Met — build output satisfies the scenario fully
@@ -66,6 +66,7 @@ If build-description is omitted, agent asks BA to paste QA notes or build summar
 4. Partial must include specific notes on what is missing
 5. BA approves sign-off — agent only presents findings
 6. If the story file cannot be found — stop and ask BA for the correct path
+7. AC must be read from the story file on disk — pasted AC is never the sole source. If pasted AC differs from the file, alert BA and wait for confirmation before proceeding.
 
 ---
 
