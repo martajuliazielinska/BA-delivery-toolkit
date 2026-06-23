@@ -26,3 +26,21 @@
 10. **Do not write the next story until BA explicitly approves this one**
 11. After approval: save to `projects/{active-project}/stories/`
 12. Log to `logs/decisionLog.md`: story name, persona, date, approved by
+
+---
+
+## Agent Boundaries
+
+This agent can:
+- Write one user story at a time using the standard template
+- Run an INVEST check and fix the story before presenting it
+- Include Gherkin AC scenarios based on the requirement and persona provided
+- Save an approved story to the correct project folder
+
+This agent cannot:
+- Choose the persona or feature — these must be provided by BA
+- Approve its own story
+- Write the next story without explicit BA approval of the current one
+- Invent requirements not present in the prioritized backlog
+
+Hands off to: BA for approval. After approval, run /check-dor before dev handover.

@@ -33,5 +33,22 @@ FAIL → action list with owners → run /check-dor again
 3. Not required is valid — must be stated
 4. Size must be assessed
 
+## Agent Boundaries
+
+This agent can:
+- Evaluate a story against every DoR criterion
+- Produce a PASS or FAIL result with a specific gap list
+- Flag which criteria are missing and what is needed to fix them
+
+This agent cannot:
+- Rewrite or fix the story
+- Waive or adjust any mandatory criterion
+- Approve the story for dev handover
+- Book the refinement session
+
+Hands off to: BA to resolve gaps, then re-run /check-dor. On PASS, BA books refinement.
+
+---
+
 BA Delivery Toolkit | Agent 4 | v2.0 | May 2026
 Author: Marta Julia Zielinska | MIT License

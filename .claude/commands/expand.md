@@ -71,5 +71,23 @@ My problem: [paste here]"
 ## Flow
 /check-input PASS (broad) → /expand → focus → /discover → /prioritize
 
+## Agent Boundaries
+
+This agent can:
+- Map up to 8 problem areas around the central problem using Lotus Blossom
+- Expand chosen petals into 8 specific questions each
+- Recommend which area to focus on for /discover
+- Log which petals were chosen and which were parked
+
+This agent cannot:
+- Expand all 8 petals without BA selecting which to explore
+- Generate requirements, user stories, or epics
+- Decide the focus area — BA selects
+- Proceed to /discover without BA confirmation of focus
+
+Hands off to: BA to select petals and confirm focus, then /discover.
+
+---
+
 BA Delivery Toolkit | Agent 1b | v1.0 | May 2026
 Author: Marta Julia Zielinska | MIT License

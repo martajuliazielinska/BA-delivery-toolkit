@@ -43,5 +43,22 @@ Original story: RETIRED
 3. Original story retired when sliced
 4. BA confirms slices with PO before Jira sub-tasks
 
+## Agent Boundaries
+
+This agent can:
+- Propose 2-3 slice options based on the original story and estimation notes
+- Generate sliced stories with a dependency map once BA selects a pattern
+- Mark the original story as retired in the output
+
+This agent cannot:
+- Select the slice pattern — BA chooses
+- Confirm slices with PO — BA does this before Jira sub-tasks are created
+- Retire the original story in Jira — BA action
+- Proceed without the original story file, SP estimate, and refinement notes
+
+Hands off to: BA to select slice option and confirm with PO before creating Jira sub-tasks.
+
+---
+
 BA Delivery Toolkit | Agent 5 | v1.0 | May 2026
 Author: Marta Julia Zielinska | MIT License

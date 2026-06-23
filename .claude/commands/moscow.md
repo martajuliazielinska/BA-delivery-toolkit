@@ -28,5 +28,23 @@ Approved by: [name] | Date: [date]
 3. Conflicts must have named owner
 4. Business sign-off before /prioritize
 
+## Agent Boundaries
+
+This agent can:
+- Present each requirement for BA and business to categorise
+- Record the assigned MoSCoW category as directed
+- Flag conflicts where requirements cannot all be Must Have
+- Name the conflict owner and deadline as provided by BA and business
+
+This agent cannot:
+- Assign MoSCoW categories without BA and business input
+- Resolve conflicts — conflicts need a named human owner
+- Approve the MoSCoW output — business sign-off is required
+- Proceed to /prioritize without explicit sign-off
+
+Hands off to: BA and business to sign off the MoSCoW output, then /prioritize.
+
+---
+
 BA Delivery Toolkit | Agent 2a | v1.0 | May 2026
 Author: Marta Julia Zielinska | MIT License

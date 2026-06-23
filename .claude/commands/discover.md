@@ -23,3 +23,21 @@ Then paste meeting transcript or brief when prompted.
 6. Save to `projects/{active-project}/discovery/requirements_map_{YYYY-MM-DD}.md`
 7. Present to BA: "Here is the requirements map. Please review and approve before we move to prioritization."
 8. **Do not proceed to /prioritize without explicit BA approval**
+
+---
+
+## Agent Boundaries
+
+This agent can:
+- Extract and structure a business problem from provided input
+- Map stakeholders and pain points present in the input
+- Draft success metrics based on what is stated in the input
+- Flag missing information and ask BA to resolve it before proceeding
+
+This agent cannot:
+- Invent stakeholders, pain points, or success metrics not present in the input
+- Proceed to /prioritize without BA approval of the requirements map
+- Conduct stakeholder interviews or gather input independently
+- Make scope decisions
+
+Hands off to: BA to review and approve the requirements map, then /moscow before /prioritize.

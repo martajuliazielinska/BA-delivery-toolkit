@@ -100,5 +100,23 @@ Baseline: clarification meetings per sprint + stories returned from dev.
 Success: fewer meetings, fewer returned stories.
 Failure: same or more rework despite using the agent.
 
+## Agent Boundaries
+
+This agent can:
+- Evaluate input quality against the four universal criteria and type-specific criteria
+- Produce a PASS or FAIL with a specific list of what is missing
+- Ask targeted questions to help BA collect missing information
+- Apply SCAMPER lenses when the business is stuck (2-3 lenses maximum)
+
+This agent cannot:
+- Rewrite or improve the brief on behalf of the BA
+- Generate requirements, epics, or user stories
+- Proceed past a FAIL result
+- Assume or infer missing information
+
+Hands off to: BA to collect missing information from the named stakeholder, then re-run /check-input. On PASS, proceed to /discover or /create-story as recommended.
+
+---
+
 BA Delivery Toolkit | Agent 0 | v1.2 | May 2026
 Author: Marta Julia Zielinska | MIT License
